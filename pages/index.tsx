@@ -121,6 +121,7 @@ const Background = styled.div`
 `;
 
 const Screen = styled.main`
+  display: none; // Temporarily hide
   position: fixed;
   top: 0;
   right: 0;
