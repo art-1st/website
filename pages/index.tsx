@@ -11,6 +11,8 @@ import { ColorPalette, Orb } from "lib/orbAnimator";
 import { OpenInNew } from "@mui/icons-material";
 import theme from "lib/theme";
 
+PIXI.utils.skipHello();
+
 const Home: NextPage = () => {
   // const { currentTheme, currentSystemTheme, selectedTheme } = useStore();
   // const { setSelectedTheme } = usePersistStore();
@@ -80,12 +82,11 @@ const Home: NextPage = () => {
           sx={{
             overflow: "auto",
             px: 8,
-            py: 4,
+            py: 6,
             borderRadius: 6,
             background: "rgba(255, 255, 255, 0.35)",
             [theme.breakpoints.down("md")]: {
               px: 4,
-              py: 2,
             },
           }}
         >

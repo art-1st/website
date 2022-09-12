@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import { useEffect } from "react";
 import { useStore } from "store/store";
 import { usePersistStore } from "store/persist";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { setCurrentSystemTheme, setSelectedTheme } = useStore();
@@ -30,7 +31,17 @@ function MyApp({ Component, pageProps }: AppProps) {
     }
   }, [selectedTheme, setCurrentSystemTheme, setSelectedTheme]);
 
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Head>
+        <meta
+          name="viewport"
+          content="viewport-fit=cover, width=device-width, initial-scale=1"
+        />
+      </Head>
+      <Component {...pageProps} />;
+    </>
+  );
 }
 
 export default MyApp;
