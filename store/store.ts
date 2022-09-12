@@ -3,14 +3,15 @@ import { SelectedTheme, Theme } from "interfaces/theme";
 import { usePersistStore } from "./persist";
 
 interface Store {
-  currentSystemTheme: Theme;
   currentTheme: () => SelectedTheme;
+  currentSystemTheme: Theme;
+  selectedTheme: SelectedTheme;
 
-  setCurrentSystemTheme: (theme: Theme) => void;
+  setCurrentSystemTheme: (currentSystemTheme: Theme) => void;
+  setSelectedTheme: (selectedTheme: SelectedTheme) => void;
 }
 
 export const useStore = create<Store>((set, get) => ({
-  currentSystemTheme: "light",
   currentTheme: () => {
     const userSelectedTheme = usePersistStore.getState().selectedTheme;
     if (userSelectedTheme) {
@@ -24,7 +25,12 @@ export const useStore = create<Store>((set, get) => ({
       return get().currentSystemTheme;
     }
   },
-  setCurrentSystemTheme: (theme) => {
-    set({ currentSystemTheme: theme });
+  currentSystemTheme: "light",
+  selectedTheme: "light",
+  setCurrentSystemTheme: (currentSystemTheme) => {
+    set({ currentSystemTheme });
+  },
+  setSelectedTheme: (selectedTheme) => {
+    set({ selectedTheme });
   },
 }));

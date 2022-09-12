@@ -5,9 +5,14 @@ import { useStore } from "store/store";
 import { usePersistStore } from "store/persist";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const { setCurrentSystemTheme } = useStore();
+  const { setCurrentSystemTheme, setSelectedTheme } = useStore();
+  const { selectedTheme } = usePersistStore();
 
   useEffect(() => {
+    if (selectedTheme) {
+      setSelectedTheme(selectedTheme);
+    }
+
     if (window.matchMedia) {
       const initialSystemTheme = window.matchMedia(
         "(prefers-color-scheme: dark)"
@@ -23,7 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           setCurrentSystemTheme(event.matches ? "dark" : "light");
         });
     }
-  }, [setCurrentSystemTheme]);
+  }, [selectedTheme, setCurrentSystemTheme, setSelectedTheme]);
 
   return <Component {...pageProps} />;
 }
