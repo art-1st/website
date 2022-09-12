@@ -47,7 +47,7 @@ export class ColorPalette {
 
   constructor() {
     this.setColors();
-    this.setCustomProperties();
+    // this.setCustomProperties();
   }
 
   setColors() {
@@ -90,18 +90,18 @@ export class ColorPalette {
     );
   }
 
-  setCustomProperties() {
-    // set CSS custom properties so that the colors defined here can be used throughout the UI
-    document.documentElement.style.setProperty("--hue", this.hue.toString());
-    document.documentElement.style.setProperty(
-      "--hue-complimentary1",
-      this.complimentaryHue1.toString()
-    );
-    document.documentElement.style.setProperty(
-      "--hue-complimentary2",
-      this.complimentaryHue2.toString()
-    );
-  }
+  // setCustomProperties() {
+  //   // set CSS custom properties so that the colors defined here can be used throughout the UI
+  //   document.documentElement.style.setProperty("--hue", this.hue.toString());
+  //   document.documentElement.style.setProperty(
+  //     "--hue-complimentary1",
+  //     this.complimentaryHue1.toString()
+  //   );
+  //   document.documentElement.style.setProperty(
+  //     "--hue-complimentary2",
+  //     this.complimentaryHue2.toString()
+  //   );
+  // }
 }
 
 // Orb class
