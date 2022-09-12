@@ -10,6 +10,10 @@ class MyDocument extends Document {
             name="description"
             content='Front-End Developer Yoon Hwan "Leo" Cho&apos;s Website'
           />
+          <meta
+            name="viewport"
+            content="viewport-fit=cover, width=device-width, initial-scale=1"
+          />
           <link rel="icon" href="/favicon.ico" />
           <link
             rel="apple-touch-icon"
