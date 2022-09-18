@@ -134,6 +134,17 @@ const Home: NextPage = () => {
             </Button>
             <Button
               LinkComponent="a"
+              href="https://blog.art1st.me"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="outlined"
+              color="inherit"
+              endIcon={<OpenInNew />}
+            >
+              블로그
+            </Button>
+            <Button
+              LinkComponent="a"
               href="https://github.com/art-1st"
               target="_blank"
               rel="noopener noreferrer"
