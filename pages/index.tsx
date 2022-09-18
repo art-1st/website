@@ -65,6 +65,11 @@ const Home: NextPage = () => {
     <Container>
       <Head>
         <title>Yoon Hwan &quot;Leo&quot; Cho</title>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8014257755780542"
+          crossOrigin="anonymous"
+        />
       </Head>
       <OrbCanvas ref={orbCanvasRef} />
       <Box
