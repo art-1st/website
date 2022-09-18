@@ -38,6 +38,11 @@ function MyApp({ Component, pageProps }: AppProps) {
           name="viewport"
           content="viewport-fit=cover, width=device-width, initial-scale=1"
         />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8014257755780542"
+          crossOrigin="anonymous"
+        />
       </Head>
       <Component {...pageProps} />
     </>
