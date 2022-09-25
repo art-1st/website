@@ -132,7 +132,7 @@ const Home: NextPage = () => {
           >
             <Button
               LinkComponent="a"
-              href="https://yoonhwancho.notion.site/6dcda75c978746e2b6af21f64f241919"
+              href="https://yoonhwancho.notion.site/Leo-b5e1223a00b745aaa5c9e730336a7204"
               target="_blank"
               rel="noopener noreferrer"
               variant="outlined"
