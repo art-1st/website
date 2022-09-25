@@ -8,7 +8,11 @@ import { KawaseBlurFilter } from "@pixi/filter-kawase-blur";
 // import { usePersistStore } from "store/persist";
 // import { useStore } from "store/store";
 import { ColorPalette, Orb } from "lib/orbAnimator";
-import { OpenInNew } from "@mui/icons-material";
+import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
+import ContactPageIcon from "@mui/icons-material/ContactPage";
+import WebStoriesIcon from "@mui/icons-material/WebStories";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import theme from "lib/theme";
 
 PIXI.utils.skipHello();
@@ -133,7 +137,8 @@ const Home: NextPage = () => {
               rel="noopener noreferrer"
               variant="outlined"
               color="success"
-              endIcon={<OpenInNew />}
+              startIcon={<ContactPageIcon />}
+              endIcon={<ArrowOutwardIcon fontSize="small" />}
             >
               자기소개서 및 경력기술서
             </Button>
@@ -144,7 +149,8 @@ const Home: NextPage = () => {
               rel="noopener noreferrer"
               variant="outlined"
               color="inherit"
-              endIcon={<OpenInNew />}
+              startIcon={<WebStoriesIcon />}
+              endIcon={<ArrowOutwardIcon fontSize="small" />}
             >
               블로그
             </Button>
@@ -155,7 +161,8 @@ const Home: NextPage = () => {
               rel="noopener noreferrer"
               variant="outlined"
               color="inherit"
-              endIcon={<OpenInNew />}
+              startIcon={<GitHubIcon fontSize="small" />}
+              endIcon={<ArrowOutwardIcon fontSize="small" />}
             >
               GitHub
             </Button>
@@ -166,7 +173,8 @@ const Home: NextPage = () => {
               rel="noopener noreferrer"
               variant="outlined"
               color="inherit"
-              endIcon={<OpenInNew />}
+              startIcon={<LinkedInIcon />}
+              endIcon={<ArrowOutwardIcon fontSize="small" />}
             >
               LinkedIn
             </Button>
